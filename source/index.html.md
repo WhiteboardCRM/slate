@@ -65,13 +65,14 @@ You must replace <code>myAuthToken</code> with your personal Auth Token.
 
 # Contacts
 
+[comment]: # (									GET CONTACTS	)
 ## Get All Contacts
 
 ```php
 // set headers
 
-api = WbCRM::APIClient.authorize!('myAuthToken')
-api.contacts.get
+$api = WbCRM::APIClient->authorize!('myAuthToken');
+$api->contacts->get();
 ```
 
 ```python
@@ -99,18 +100,20 @@ let contacts = api.contacts.get();
 [
   {
     "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
+    "lastName": "Pike",
+    "fistName": "Rob",
+    "createdDate": "2017-10-17T19:19:19-06:00",
+    "cellPhone": 5551234567,
+    "birthday": "1956-01-01T12:00:00-06:00"
   },
   {
     "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
+    "lastName": "Thompson",
+    "fistName": "Ken",
+    "createdDate": "2016-10-17T19:19:19-06:00",
+    "cellPhone": 5551234567,
+    "birthday": "1943-02-04T12:00:00-06:00"
+  },
 ]
 ```
 
@@ -120,35 +123,89 @@ This endpoint retrieves all contacts.
 
 `GET http://api.whiteboardmortgage.com/v1/contacts`
 
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | Found
+204 | No Content
+
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include contacts that have already been adopted.
+filter | null | A string given in format "field:text" performs a search where the field is like the text.
+sort | null | A string given in format "field1,field2" sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.
+limit | null | A string given in format <strong>"50,0"</strong> limits by the first and uses the second as an offset. 
 
 <aside class="success">
 Slap Hands - we are so cool!
 </aside>
 
-## Get a Specific Contact
+[comment]: # (									POST CONTACT	)
+## Create a new Contact
 
 ```php
 require 'wbcrm'
 
 api = WbCRM::APIClient.authorize!('myAuthToken')
-api.contacts.get(2)
+api.contacts.post($data)
 ```
 
 ```python
 import wbcrm
 
 api = wbcrm.authorize('myAuthToken')
-api.contacts.get(2)
+api.contacts.post(data)
 ```
 
 ```shell
-curl "http://api.whiteboardmortgage.com/v1/contacts/2"
+curl "http://api.whiteboardmortgage.com/v1/contacts"
+  -X POST
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let data = someJson;
+let api = wbcrm.authorize('myAuthToken');
+let max = api.contacts.post(data);
+```
+
+This endpoint creates a new contact.
+
+### HTTP Request
+
+`POST http://example.com/contacts`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | OK
+404 | Not Found 
+
+
+[comment]: # (									GET CONTACT	)
+## Get a Specific Contact
+
+```php
+require 'wbcrm'
+
+api = WbCRM::APIClient.authorize!('myAuthToken')
+api.contacts.get(3)
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.contacts.get(3)
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/contacts/3"
   -H "Authorization: myAuthToken"
 ```
 
@@ -156,24 +213,25 @@ curl "http://api.whiteboardmortgage.com/v1/contacts/2"
 const wbcrm = require('wbcrm');
 
 let api = wbcrm.authorize('myAuthToken');
-let max = api.contacts.get(2);
+let max = api.contacts.get(3);
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+  "id": 3,
+  "lastName": "Kernighan",
+  "fistName": "Brian",
+  "createdDate": "2015-10-17T19:19:19-06:00",
+  "cellPhone": 5551234567,
+  "birthday": "1942-01-01T12:00:00-06:00"
 }
 ```
 
 This endpoint retrieves a specific contact.
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+<!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside> -->
 
 ### HTTP Request
 
@@ -185,24 +243,25 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the contact to retrieve
 
-## Delete a Specific Contact
+[//]: # (									PUT CONTACT	)
+## Update a Specific Contact
 
 ```php
 require 'wbcrm'
 
 api = WbCRM::APIClient.authorize!('myAuthToken')
-api.contacts.delete(2)
+api.contacts.delete(5)
 ```
 
 ```python
 import wbcrm
 
 api = wbcrm.authorize('myAuthToken')
-api.contacts.delete(2)
+api.contacts.delete(5)
 ```
 
 ```shell
-curl "http://api.whiteboardmortgage.com/v1/contacts/2"
+curl "http://api.whiteboardmortgage.com/v1/contacts/5"
   -X DELETE
   -H "Authorization: myAuthToken"
 ```
@@ -211,16 +270,52 @@ curl "http://api.whiteboardmortgage.com/v1/contacts/2"
 const wbcrm = require('wbcrm');
 
 let api = wbcrm.authorize('myAuthToken');
-let max = api.contacts.delete(2);
+let max = api.contacts.delete(5);
 ```
 
-> The above command returns JSON structured like this:
+This endpoint deletes a specific contact.
 
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
+### HTTP Request
+
+`PUT http://example.com/contacts/<ID>`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | OK
+404 | Not Found 
+
+
+[//]: # (									DELETE CONTACT	)
+
+## Delete a Specific Contact
+
+```php
+require 'wbcrm'
+
+api = WbCRM::APIClient.authorize!('myAuthToken')
+api.contacts.delete(5)
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.contacts.delete(5)
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/contacts/5"
+  -X DELETE
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let api = wbcrm.authorize('myAuthToken');
+let max = api.contacts.delete(5);
 ```
 
 This endpoint deletes a specific contact.
@@ -228,6 +323,13 @@ This endpoint deletes a specific contact.
 ### HTTP Request
 
 `DELETE http://example.com/contacts/<ID>`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | OK
+404 | Not Found 
 
 ### URL Parameters
 
