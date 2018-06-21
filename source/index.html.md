@@ -134,7 +134,7 @@ Parameter | Default | Description
 --------- | ------- | -----------
 filter | null | A string given in format "field:text" performs a search where the field is like the text.
 sort | null | A string given in format "field1,field2" sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.
-limit | null | A string given in format <strong>"50,0"</strong> limits by the first and uses the second as an offset. 
+limit | null | A string given in format **"50,0"** limits by the first and uses the second as an offset. 
 
 <aside class="success">
 Slap Hands - we are so cool!
@@ -266,7 +266,7 @@ let api = wbcrm.authorize('myAuthToken');
 let max = api.contacts.delete(5);
 ```
 
-This endpoint deletes a specific contact.
+This endpoint updates a specific contact.
 
 ### HTTP Request
 
@@ -396,7 +396,7 @@ Parameter | Default | Description
 --------- | ------- | -----------
 filter | null | A string given in format "field:text" performs a search where the field is like the text.
 sort | null | A string given in format "field1,field2" sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.
-limit | null | A string given in format <strong>"50,0"</strong> limits by the first and uses the second as an offset. 
+limit | null | A string given in format **"50,0"** limits by the first and uses the second as an offset. 
 
 <aside class="success">
 Slap Hands - We got some records!
@@ -526,7 +526,7 @@ let api = wbcrm.authorize('myAuthToken');
 let max = api.records.delete(5);
 ```
 
-This endpoint deletes a specific record.
+This endpoint updates a specific record.
 
 ### HTTP Request
 
@@ -655,7 +655,7 @@ Parameter | Default | Description
 --------- | ------- | -----------
 filter | null | A string given in format "field:text" performs a search where the field is like the text.
 sort | null | A string given in format "field1,field2" sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.
-limit | null | A string given in format <strong>"50,0"</strong> limits by the first and uses the second as an offset. 
+limit | null | A string given in format **"50,0"** limits by the first and uses the second as an offset. 
 
 <aside class="success">
 Slap Hands - We got some relationships!
@@ -784,7 +784,7 @@ let api = wbcrm.authorize('myAuthToken');
 let max = api.relationships.delete(5);
 ```
 
-This endpoint deletes a specific relationship.
+This endpoint updates a specific relationship.
 
 ### HTTP Request
 
