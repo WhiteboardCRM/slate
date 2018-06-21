@@ -243,19 +243,19 @@ ID | The ID of the contact to retrieve
 require 'wbcrm';
 
 $api = WbCRM::APIClient.authorize!('myAuthToken');
-$api.contacts.delete(5);
+$api.contacts.update(5);
 ```
 
 ```python
 import wbcrm
 
 api = wbcrm.authorize('myAuthToken')
-api.contacts.delete(5)
+api.contacts.update(5)
 ```
 
 ```shell
 curl "http://api.whiteboardmortgage.com/v1/contacts/5"
-  -X DELETE
+  -X UPDATE
   -H "Authorization: myAuthToken"
 ```
 
@@ -263,7 +263,7 @@ curl "http://api.whiteboardmortgage.com/v1/contacts/5"
 const wbcrm = require('wbcrm');
 
 let api = wbcrm.authorize('myAuthToken');
-let max = api.contacts.delete(5);
+let max = api.contacts.updatee(5);
 ```
 
 This endpoint updates a specific contact.
@@ -503,19 +503,19 @@ ID | The ID of the record to retrieve
 require 'wbcrm';
 
 $api = WbCRM::APIClient.authorize!('myAuthToken');
-$api.records.delete(5);
+$api.records.update(5);
 ```
 
 ```python
 import wbcrm
 
 api = wbcrm.authorize('myAuthToken')
-api.records.delete(5)
+api.records.update(5)
 ```
 
 ```shell
 curl "http://api.whiteboardmortgage.com/v1/records/5"
-  -X DELETE
+  -X UPDATE
   -H "Authorization: myAuthToken"
 ```
 
@@ -523,7 +523,7 @@ curl "http://api.whiteboardmortgage.com/v1/records/5"
 const wbcrm = require('wbcrm');
 
 let api = wbcrm.authorize('myAuthToken');
-let max = api.records.delete(5);
+let max = api.records.update(5);
 ```
 
 This endpoint updates a specific record.
@@ -761,19 +761,19 @@ ID | The ID of the relationship to retrieve
 require 'wbcrm';
 
 $api = WbCRM::APIClient.authorize!('myAuthToken');
-$api.relationships.delete(5);
+$api.relationships.update(5);
 ```
 
 ```python
 import wbcrm
 
 api = wbcrm.authorize('myAuthToken')
-api.relationships.delete(5)
+api.relationships.update(5)
 ```
 
 ```shell
 curl "http://api.whiteboardmortgage.com/v1/relationships/5"
-  -X DELETE
+  -X UPDATE
   -H "Authorization: myAuthToken"
 ```
 
@@ -781,7 +781,7 @@ curl "http://api.whiteboardmortgage.com/v1/relationships/5"
 const wbcrm = require('wbcrm');
 
 let api = wbcrm.authorize('myAuthToken');
-let max = api.relationships.delete(5);
+let max = api.relationships.update(5);
 ```
 
 This endpoint updates a specific relationship.
