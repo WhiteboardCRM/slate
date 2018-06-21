@@ -8,7 +8,6 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
 
 toc_footers:
-#  - <a href='#'>Sign Up for a Developer Key</a>
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -27,7 +26,7 @@ We have language bindings in Javascript, PHP, Python, and Shell! You can view co
 
 > To authorize, use this code:
 
-```php
+```php?start_inline=1
 use 'wbcrm';
 
 $api = wbcrm.authorize('myAuthToken');
@@ -51,7 +50,7 @@ const wbcrm = require('wbcrm');
 let api = wbcrm.authorize('myAuthToken');
 ```
 
-> Make sure to replace `myAuthToken` with your Auth Token.
+> Make sure to replace <code>myAuthToken</code> with your Auth Token.
 
 Whiteboard CRM uses Oauth2 Auth Tokens to allow access to the API.
 
@@ -65,10 +64,9 @@ You must replace <code>myAuthToken</code> with your personal Auth Token.
 
 # Contacts
 
-[comment]: # (									GET CONTACTS	)
 ## Get All Contacts
 
-```php
+```php?start_inline=1
 // set headers
 
 $api = WbCRM::APIClient->authorize!('myAuthToken');
@@ -142,14 +140,13 @@ limit | null | A string given in format <strong>"50,0"</strong> limits by the fi
 Slap Hands - we are so cool!
 </aside>
 
-[comment]: # (									POST CONTACT	)
 ## Create a new Contact
 
-```php
-require 'wbcrm'
+```php?start_inline=1
+require 'wbcrm';
 
-api = WbCRM::APIClient.authorize!('myAuthToken')
-api.contacts.post($data)
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.contacts.post($data);
 ```
 
 ```python
@@ -177,7 +174,7 @@ This endpoint creates a new contact.
 
 ### HTTP Request
 
-`POST http://example.com/contacts`
+`POST http://api.whiteboard.com/v1/contacts`
 
 ### HTTP Response
 
@@ -187,14 +184,13 @@ Code | Meaning
 404 | Not Found 
 
 
-[comment]: # (									GET CONTACT	)
 ## Get a Specific Contact
 
-```php
-require 'wbcrm'
+```php?start_inline=1
+require 'wbcrm';
 
-api = WbCRM::APIClient.authorize!('myAuthToken')
-api.contacts.get(3)
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.contacts.get(3);
 ```
 
 ```python
@@ -231,8 +227,6 @@ let max = api.contacts.get(3);
 
 This endpoint retrieves a specific contact.
 
-<!-- <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside> -->
-
 ### HTTP Request
 
 `GET http://api.whiteboardmortgage.com/v1/contacts/<ID>`
@@ -243,14 +237,13 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the contact to retrieve
 
-[//]: # (									PUT CONTACT	)
 ## Update a Specific Contact
 
-```php
-require 'wbcrm'
+```php?start_inline=1
+require 'wbcrm';
 
-api = WbCRM::APIClient.authorize!('myAuthToken')
-api.contacts.delete(5)
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.contacts.delete(5);
 ```
 
 ```python
@@ -277,7 +270,7 @@ This endpoint deletes a specific contact.
 
 ### HTTP Request
 
-`PUT http://example.com/contacts/<ID>`
+`PUT http://api.whiteboard.com/v1/contacts/<ID>`
 
 ### HTTP Response
 
@@ -287,15 +280,13 @@ Code | Meaning
 404 | Not Found 
 
 
-[//]: # (									DELETE CONTACT	)
-
 ## Delete a Specific Contact
 
-```php
-require 'wbcrm'
+```php?start_inline=1
+require 'wbcrm';
 
-api = WbCRM::APIClient.authorize!('myAuthToken')
-api.contacts.delete(5)
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.contacts.delete(5);
 ```
 
 ```python
@@ -322,7 +313,7 @@ This endpoint deletes a specific contact.
 
 ### HTTP Request
 
-`DELETE http://example.com/contacts/<ID>`
+`DELETE http://api.whiteboard.com/v1/contacts/<ID>`
 
 ### HTTP Response
 
@@ -337,3 +328,521 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the contact to delete
 
+# Records
+
+## Get All Records
+
+```php?start_inline=1
+// set headers
+
+$api = WbCRM::APIClient->authorize!('myAuthToken');
+$api->relationships->get();
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.records.get()
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/records"
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let api = wbcrm.authorize('myAuthToken');
+let records = api.records.get();
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "id": 1,
+    "lastName": "Pike",
+    "fistName": "Rob",
+    "createdDate": "2017-10-17T19:19:19-06:00",
+  },
+  {
+    "id": 2,
+    "lastName": "Thompson",
+    "fistName": "Ken",
+    "createdDate": "2016-10-17T19:19:19-06:00",
+  },
+]
+```
+
+This endpoint retrieves all records.
+
+### HTTP Request
+
+`GET http://api.whiteboardmortgage.com/v1/records`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | Found
+204 | No Content
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+filter | null | A string given in format "field:text" performs a search where the field is like the text.
+sort | null | A string given in format "field1,field2" sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.
+limit | null | A string given in format <strong>"50,0"</strong> limits by the first and uses the second as an offset. 
+
+<aside class="success">
+Slap Hands - We got some records!
+</aside>
+
+## Create a new Record
+
+```php?=start_inline=1
+require 'wbcrm';
+
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.records.post($data);
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.records.post(data)
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/records"
+  -X POST
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let data = someJson;
+let api = wbcrm.authorize('myAuthToken');
+let max = api.records.post(data);
+```
+
+This endpoint creates a new record.
+
+### HTTP Request
+
+`POST http://api.whiteboard.com/v1/records`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | OK
+404 | Not Found 
+
+
+## Get a Specific Record
+
+```php?start_inline=1
+require 'wbcrm';
+
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.records.get(3);
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.records.get(3)
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/records/3"
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let api = wbcrm.authorize('myAuthToken');
+let max = api.records.get(3);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 3,
+  "lastName": "Kernighan",
+  "fistName": "Brian",
+  "createdDate": "2015-10-17T19:19:19-06:00",
+}
+```
+
+This endpoint retrieves a specific record.
+
+### HTTP Request
+
+`GET http://api.whiteboardmortgage.com/v1/records/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the record to retrieve
+
+## Update a Specific Record
+
+```php?start_inline=1
+require 'wbcrm';
+
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.records.delete(5);
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.records.delete(5)
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/records/5"
+  -X DELETE
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let api = wbcrm.authorize('myAuthToken');
+let max = api.records.delete(5);
+```
+
+This endpoint deletes a specific record.
+
+### HTTP Request
+
+`PUT http://api.whiteboard.com/v1/records/<ID>`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | OK
+404 | Not Found 
+
+## Delete a Specific Record
+
+```php?start_inline=1
+require 'wbcrm';
+
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.records.delete(5);
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.records.delete(5)
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/records/5"
+  -X DELETE
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let api = wbcrm.authorize('myAuthToken');
+let max = api.records.delete(5);
+```
+
+This endpoint deletes a specific record.
+
+### HTTP Request
+
+`DELETE http://api.whiteboard.com/v1/records/<ID>`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | OK
+404 | Not Found 
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the record to delete
+
+# Relationships
+
+## Get All Relationships
+
+```php?start_inline=1
+// set headers
+
+$api = WbCRM::APIClient->authorize!('myAuthToken');
+$api->relationships->get();
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.relationships.get()
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/relationships"
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let api = wbcrm.authorize('myAuthToken');
+let relationships = api.relationships.get();
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "id": 1,
+    "lastName": "Pike",
+    "fistName": "Rob",
+    "createdDate": "2017-10-17T19:19:19-06:00",
+  },
+  {
+    "id": 2,
+    "lastName": "Thompson",
+    "fistName": "Ken",
+    "createdDate": "2016-10-17T19:19:19-06:00",
+  },
+]
+```
+
+This endpoint retrieves all relationships.
+
+### HTTP Request
+
+`GET http://api.whiteboardmortgage.com/v1/relationships`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | Found
+204 | No Content
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+filter | null | A string given in format "field:text" performs a search where the field is like the text.
+sort | null | A string given in format "field1,field2" sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.
+limit | null | A string given in format <strong>"50,0"</strong> limits by the first and uses the second as an offset. 
+
+<aside class="success">
+Slap Hands - We got some relationships!
+</aside>
+
+## Create a new Relationship
+
+```php?start_inline=1
+require 'wbcrm';
+
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.relationships.post($data);
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.relationships.post(data)
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/relationships"
+  -X POST
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let data = someJson;
+let api = wbcrm.authorize('myAuthToken');
+let max = api.relationships.post(data);
+```
+
+This endpoint creates a new relationship.
+
+### HTTP Request
+
+`POST http://api.whiteboard.com/v1/relationships`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | OK
+404 | Not Found 
+
+## Get a Specific Relationship
+
+```php?start_inline=1
+require 'wbcrm';
+
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.relationships.get(3);
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.relationships.get(3)
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/relationships/3"
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let api = wbcrm.authorize('myAuthToken');
+let max = api.relationships.get(3);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 3,
+  "lastName": "Kernighan",
+  "fistName": "Brian",
+  "createdDate": "2015-10-17T19:19:19-06:00",
+}
+```
+
+This endpoint retrieves a specific relationship.
+
+### HTTP Request
+
+`GET http://api.whiteboardmortgage.com/v1/relationships/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the relationship to retrieve
+
+## Update a Specific Relationship
+
+```php?start_inline=1
+require 'wbcrm';
+
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.relationships.delete(5);
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.relationships.delete(5)
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/relationships/5"
+  -X DELETE
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let api = wbcrm.authorize('myAuthToken');
+let max = api.relationships.delete(5);
+```
+
+This endpoint deletes a specific relationship.
+
+### HTTP Request
+
+`PUT http://api.whiteboard.com/v1/relationships/<ID>`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | OK
+404 | Not Found 
+
+
+
+## Delete a Specific Relationship
+
+```php?start_inline=1
+require 'wbcrm';
+
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.relationships.delete(5);
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.relationships.delete(5)
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/relationships/5"
+  -X DELETE
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let api = wbcrm.authorize('myAuthToken');
+let max = api.relationships.delete(5);
+```
+
+This endpoint deletes a specific relationship.
+
+### HTTP Request
+
+`DELETE http://api.whiteboard.com/v1/relationships/<ID>`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | OK
+404 | Not Found 
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the relationship to delete
