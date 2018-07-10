@@ -846,3 +846,77 @@ Code | Meaning
 Parameter | Description
 --------- | -----------
 ID | The ID of the relationship to delete
+
+# Search
+
+## Get A Collection of Contacts, Records, and Relationships.
+
+```php?start_inline=1
+// set headers
+
+$api = WbCRM::APIClient->authorize!('myAuthToken');
+$api->search->get();
+```
+
+```python
+import wbcrm
+
+api = wbcrm.authorize('myAuthToken')
+api.search.get()
+```
+
+```shell
+curl "http://api.whiteboardmortgage.com/v1/search"
+  -H "Authorization: myAuthToken"
+```
+
+```javascript
+const wbcrm = require('wbcrm');
+
+let api = wbcrm.authorize('myAuthToken');
+let search = api.search.get();
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "entryTypeID": 1
+    {
+      "id": 1,
+      "lastName": "Pike",
+      "fistName": "Rob",
+      "createdDate": "2017-10-17T19:19:19-06:00",
+    },
+    {
+      "id": 2,
+      "lastName": "Thompson",
+      "fistName": "Ken",
+      "createdDate": "2016-10-17T19:19:19-06:00",
+    },
+  },
+]
+```
+
+This endpoint retrieves all relevant entries.
+
+### HTTP Request
+
+`GET http://api.whiteboardmortgage.com/v1/search`
+
+### HTTP Response
+
+Code | Meaning
+---- | -------
+200 | Found
+204 | No Content
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+filter | null | A string given in format "field:text" performs a search where the field is like the text.
+sort | null | A string given in format "field1,field2" sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.
+limit | null | A string given in format **"50,0"** limits by the first and uses the second as an offset. 
+
