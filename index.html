@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;php&quot;,&quot;python&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -212,7 +212,7 @@
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
+              <a href="#" data-language-name="php">php</a>
               <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
         </div>
@@ -222,31 +222,104 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#contacts" class="toc-h1 toc-link" data-title="contacts">Contacts</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#get-all-contacts" class="toc-h2 toc-link" data-title="get-all-contacts">Get All Contacts</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#create-a-new-contact" class="toc-h2 toc-link" data-title="create-a-new-contact">Create a new Contact</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#get-a-specific-contact" class="toc-h2 toc-link" data-title="get-a-specific-contact">Get a Specific Contact</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-specific-contact" class="toc-h2 toc-link" data-title="update-a-specific-contact">Update a Specific Contact</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-contact" class="toc-h2 toc-link" data-title="delete-a-specific-contact">Delete a Specific Contact</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#records" class="toc-h1 toc-link" data-title="records">Records</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-records" class="toc-h2 toc-link" data-title="get-all-records">Get All Records</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-new-record" class="toc-h2 toc-link" data-title="create-a-new-record">Create a new Record</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-record" class="toc-h2 toc-link" data-title="get-a-specific-record">Get a Specific Record</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-specific-record" class="toc-h2 toc-link" data-title="update-a-specific-record">Update a Specific Record</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-record" class="toc-h2 toc-link" data-title="delete-a-specific-record">Delete a Specific Record</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#relationships" class="toc-h1 toc-link" data-title="relationships">Relationships</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-relationships" class="toc-h2 toc-link" data-title="get-all-relationships">Get All Relationships</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-new-relationship" class="toc-h2 toc-link" data-title="create-a-new-relationship">Create a new Relationship</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-relationship" class="toc-h2 toc-link" data-title="get-a-specific-relationship">Get a Specific Relationship</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-specific-relationship" class="toc-h2 toc-link" data-title="update-a-specific-relationship">Update a Specific Relationship</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-relationship" class="toc-h2 toc-link" data-title="delete-a-specific-relationship">Delete a Specific Relationship</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#search" class="toc-h1 toc-link" data-title="search">Search</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-a-collection-of-contacts-records-and-relationships" class="toc-h2 toc-link" data-title="get-a-collection-of-contacts-records-and-relationships">Get A Collection of Contacts, Records, and Relationships.</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#tasks" class="toc-h1 toc-link" data-title="tasks">Tasks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-a-collection-of-team-specific-task-entries" class="toc-h2 toc-link" data-title="get-a-collection-of-team-specific-task-entries">Get A Collection of team specific Task Entries.</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-new-task" class="toc-h2 toc-link" data-title="create-a-new-task">Create a new Task</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-task" class="toc-h2 toc-link" data-title="get-a-specific-task">Get a Specific Task</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-specific-task" class="toc-h2 toc-link" data-title="update-a-specific-task">Update a Specific Task</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-task" class="toc-h2 toc-link" data-title="delete-a-specific-task">Delete a Specific Task</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -254,55 +327,53 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to the Whiteboard CRM API! You can use our API to access Whiteboard CRM API endpoints, which can get information on various Contacts, Records, and Relationships in our database.</p>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<p>We have language bindings in Javascript, PHP, Python, and Shell! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<pre class="highlight php"><code><span class="k">use</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="o">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
 </code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
 curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
 </code></pre>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
+<p>Make sure to replace <code>myAuthToken</code> with your Auth Token.</p>
 </blockquote>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+<p>Whiteboard CRM uses Oauth2 Auth Tokens to allow access to the API.</p>
 
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
+<p>Whiteboard CRM expects for the Auth Token to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p><code>Authorization: meowmeowmeow</code></p>
+<p><code>Authorization: myAuthToken</code></p>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code>myAuthToken</code> with your personal Auth Token.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='contacts'>Contacts</h1><h2 id='get-all-contacts'>Get All Contacts</h2><pre class="highlight php"><code><span class="c1">// set headers
+</span>
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">-&gt;</span><span class="na">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">contacts</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">contacts</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/contacts"</span>
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">contacts</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -310,23 +381,41 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+    </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pike"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rob"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cellPhone"</span><span class="p">:</span><span class="w"> </span><span class="mi">5551234567</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"birthday"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1956-01-01T12:00:00-06:00"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thompson"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ken"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"cellPhone"</span><span class="p">:</span><span class="w"> </span><span class="mi">5551234567</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"birthday"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1943-02-04T12:00:00-06:00"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
+<p>This endpoint retrieves all contacts.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
+<p><code>GET http://api.whiteboardmortgage.com/v1/contacts</code></p>
+<h3 id='http-response'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Found</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -336,51 +425,91 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>filter</td>
+<td>null</td>
+<td>A string given in format &quot;field:text&quot; performs a search where the field is like the text.</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>sort</td>
+<td>null</td>
+<td>A string given in format &quot;field1,field2&quot; sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>null</td>
+<td>A string given in format <strong>&quot;50,0&quot;</strong> limits by the first and uses the second as an offset.</td>
 </tr>
 </tbody></table>
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Slap Hands - we are so cool!
 </aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='create-a-new-contact'>Create a new Contact</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">contacts</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">contacts</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/contacts"</span>
+  -X POST
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">someJson</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre>
+<p>This endpoint creates a new contact.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST http://api.whiteboard.com/v1/contacts</code></p>
+<h3 id='http-response-2'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-contact'>Get a Specific Contact</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">contacts</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">contacts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/contacts/3"</span>
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kernighan"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brian"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"cellPhone"</span><span class="p">:</span><span class="w"> </span><span class="mi">5551234567</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"birthday"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1942-01-01T12:00:00-06:00"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<p>This endpoint retrieves a specific contact.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET http://api.whiteboardmortgage.com/v1/contacts/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -390,36 +519,79 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>The ID of the contact to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='update-a-specific-contact'>Update a Specific Contact</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">contacts</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">contacts</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/contacts/5"</span>
+  -X UPDATE
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="nx">updatee</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
 </code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
+<p>This endpoint updates a specific contact.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PUT http://api.whiteboard.com/v1/contacts/&lt;ID&gt;</code></p>
+<h3 id='http-response-3'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-contact'>Delete a Specific Contact</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">contacts</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">contacts</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/contacts/5"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">contacts</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre>
+<p>This endpoint deletes a specific contact.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>DELETE http://api.whiteboard.com/v1/contacts/&lt;ID&gt;</code></p>
+<h3 id='http-response-4'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -429,13 +601,811 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>The ID of the contact to delete</td>
+</tr>
+</tbody></table>
+<h1 id='records'>Records</h1><h2 id='get-all-records'>Get All Records</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">-&gt;</span><span class="na">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">relationships</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">records</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/records"</span>
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">records</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">records</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pike"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rob"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thompson"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ken"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all records.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET http://api.whiteboardmortgage.com/v1/records</code></p>
+<h3 id='http-response-5'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Found</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter</td>
+<td>null</td>
+<td>A string given in format &quot;field:text&quot; performs a search where the field is like the text.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>null</td>
+<td>A string given in format &quot;field1,field2&quot; sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>null</td>
+<td>A string given in format <strong>&quot;50,0&quot;</strong> limits by the first and uses the second as an offset.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Slap Hands - We got some records!
+</aside>
+<h2 id='create-a-new-record'>Create a new Record</h2><pre class="highlight php"><code>require 'wbcrm';
+
+$api = WbCRM::APIClient.authorize!('myAuthToken');
+$api.records.post($data);
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">records</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/records"</span>
+  -X POST
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">someJson</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">records</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre>
+<p>This endpoint creates a new record.</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>POST http://api.whiteboard.com/v1/records</code></p>
+<h3 id='http-response-6'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-record'>Get a Specific Record</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">.</span><span class="nx">records</span><span class="o">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">records</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/records/3"</span>
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">records</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kernighan"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brian"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific record.</p>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET http://api.whiteboardmortgage.com/v1/records/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the record to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-specific-record'>Update a Specific Record</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">.</span><span class="nx">records</span><span class="o">.</span><span class="nx">update</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">records</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/records/5"</span>
+  -X UPDATE
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">records</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre>
+<p>This endpoint updates a specific record.</p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>PUT http://api.whiteboard.com/v1/records/&lt;ID&gt;</code></p>
+<h3 id='http-response-7'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-record'>Delete a Specific Record</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">.</span><span class="nx">records</span><span class="o">.</span><span class="nb">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">records</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/records/5"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">records</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre>
+<p>This endpoint deletes a specific record.</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>DELETE http://api.whiteboard.com/v1/records/&lt;ID&gt;</code></p>
+<h3 id='http-response-8'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the record to delete</td>
+</tr>
+</tbody></table>
+<h1 id='relationships'>Relationships</h1><h2 id='get-all-relationships'>Get All Relationships</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">-&gt;</span><span class="na">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">relationships</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">relationships</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/relationships"</span>
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">relationships</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">relationships</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pike"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rob"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thompson"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ken"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all relationships.</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET http://api.whiteboardmortgage.com/v1/relationships</code></p>
+<h3 id='http-response-9'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Found</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter</td>
+<td>null</td>
+<td>A string given in format &quot;field:text&quot; performs a search where the field is like the text.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>null</td>
+<td>A string given in format &quot;field1,field2&quot; sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>null</td>
+<td>A string given in format <strong>&quot;50,0&quot;</strong> limits by the first and uses the second as an offset.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Slap Hands - We got some relationships!
+</aside>
+<h2 id='create-a-new-relationship'>Create a new Relationship</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">relationships</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">relationships</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/relationships"</span>
+  -X POST
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">someJson</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">relationships</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre>
+<p>This endpoint creates a new relationship.</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>POST http://api.whiteboard.com/v1/relationships</code></p>
+<h3 id='http-response-10'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-relationship'>Get a Specific Relationship</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">relationships</span><span class="o">&gt;</span><span class="nx">get</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">relationships</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/relationships/3"</span>
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">relationships</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kernighan"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brian"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific relationship.</p>
+<h3 id='http-request-13'>HTTP Request</h3>
+<p><code>GET http://api.whiteboardmortgage.com/v1/relationships/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the relationship to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-specific-relationship'>Update a Specific Relationship</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">relationships</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">relationships</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/relationships/5"</span>
+  -X UPDATE
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">relationships</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre>
+<p>This endpoint updates a specific relationship.</p>
+<h3 id='http-request-14'>HTTP Request</h3>
+<p><code>PUT http://api.whiteboard.com/v1/relationships/&lt;ID&gt;</code></p>
+<h3 id='http-response-11'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-relationship'>Delete a Specific Relationship</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">relationships</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">relationships</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/relationships/5"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">relationships</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre>
+<p>This endpoint deletes a specific relationship.</p>
+<h3 id='http-request-15'>HTTP Request</h3>
+<p><code>DELETE http://api.whiteboard.com/v1/relationships/&lt;ID&gt;</code></p>
+<h3 id='http-response-12'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the relationship to delete</td>
+</tr>
+</tbody></table>
+<h1 id='search'>Search</h1><h2 id='get-a-collection-of-contacts-records-and-relationships'>Get A Collection of Contacts, Records, and Relationships.</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">-&gt;</span><span class="na">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">search</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">search</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/search"</span>
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">search</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">search</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"entryTypeID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pike"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rob"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thompson"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ken"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all relevant entries.</p>
+<h3 id='http-request-16'>HTTP Request</h3>
+<p><code>GET http://api.whiteboardmortgage.com/v1/search</code></p>
+<h3 id='http-response-13'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Found</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter</td>
+<td>null</td>
+<td>A string given in format &quot;field:text&quot; performs a search where the field is like the text.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>null</td>
+<td>A string given in format &quot;field1,field2&quot; sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>null</td>
+<td>A string given in format <strong>&quot;50,0&quot;</strong> limits by the first and uses the second as an offset.</td>
+</tr>
+</tbody></table>
+<h1 id='tasks'>Tasks</h1><h2 id='get-a-collection-of-team-specific-task-entries'>Get A Collection of team specific Task Entries.</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">-&gt;</span><span class="na">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">tasks</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">();</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/tasks"</span>
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">tasks</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">tasks</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"entryTypeID"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pike"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rob"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Thompson"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ken"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all relevant entries.</p>
+<h3 id='http-request-17'>HTTP Request</h3>
+<p><code>GET http://api.whiteboardmortgage.com/v1/tasks</code></p>
+<h3 id='http-response-14'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>Found</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+</tr>
+</tbody></table>
+<h3 id='query-parameters-5'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter</td>
+<td>null</td>
+<td>A string given in format &quot;field:text&quot; performs a search where the field is like the text.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>null</td>
+<td>A string given in format &quot;field1,field2&quot; sorts the returned results by the given fields. This can be prepended with negative(-) to reverse the sort order.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>null</td>
+<td>A string given in format <strong>&quot;50,0&quot;</strong> limits by the first and uses the second as an offset.</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-new-task'>Create a new Task</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">tasks</span><span class="o">-&gt;</span><span class="na">post</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/tasks"</span>
+  -X POST
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">someJson</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">tasks</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</code></pre>
+<p>This endpoint creates a new task.</p>
+<h3 id='http-request-18'>HTTP Request</h3>
+<p><code>POST http://api.whiteboard.com/v1/tasks</code></p>
+<h3 id='http-response-15'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
+<h2 id='get-a-specific-task'>Get a Specific Task</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">tasks</span><span class="o">&gt;</span><span class="nx">get</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/tasks/3"</span>
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">tasks</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kernighan"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fistName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brian"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"createdDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2015-10-17T19:19:19-06:00"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific task.</p>
+<h3 id='http-request-19'>HTTP Request</h3>
+<p><code>GET http://api.whiteboardmortgage.com/v1/tasks/&lt;ID&gt;</code></p>
+<h3 id='url-parameters-7'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the task to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='update-a-specific-task'>Update a Specific Task</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">tasks</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/tasks/5"</span>
+  -X UPDATE
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">tasks</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre>
+<p>This endpoint updates a specific task.</p>
+<h3 id='http-request-20'>HTTP Request</h3>
+<p><code>PUT http://api.whiteboard.com/v1/tasks/&lt;ID&gt;</code></p>
+<h3 id='http-response-16'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
+<h2 id='delete-a-specific-task'>Delete a Specific Task</h2><pre class="highlight php"><code><span class="k">require</span> <span class="s1">'wbcrm'</span><span class="p">;</span>
+
+<span class="nv">$api</span> <span class="o">=</span> <span class="nx">WbCRM</span><span class="o">::</span><span class="na">APIClient</span><span class="o">.</span><span class="nx">authorize</span><span class="o">!</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="nv">$api</span><span class="o">-&gt;</span><span class="na">tasks</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">wbcrm</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">wbcrm</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'myAuthToken'</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">tasks</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://api.whiteboardmortgage.com/v1/tasks/5"</span>
+  -X DELETE
+  -H <span class="s2">"Authorization: myAuthToken"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">wbcrm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'wbcrm'</span><span class="p">);</span>
+
+<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">wbcrm</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'myAuthToken'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">tasks</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</code></pre>
+<p>This endpoint deletes a specific task.</p>
+<h3 id='http-request-21'>HTTP Request</h3>
+<p><code>DELETE http://api.whiteboard.com/v1/tasks/&lt;ID&gt;</code></p>
+<h3 id='http-response-17'>HTTP Response</h3>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td>OK</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+</tr>
+</tbody></table>
+<h3 id='url-parameters-8'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The ID of the task to delete</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<!-- <aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside> -->
 
-<p>The Kittn API uses the following error codes:</p>
+<aside class="notice">
+Below are some common errors and their meanings within our responses.
+</aside>
+
+<p>The Whiteboard CRM API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -445,23 +1415,23 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>Bad Request -- Your request is invalid.</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>Unauthorized -- Your Auth token is invalid.</td>
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>Forbidden -- The record requested is hidden for administrators only.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Not Found -- The specified record could not be found.</td>
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>Method Not Allowed -- You tried to access a record with an invalid method.</td>
 </tr>
 <tr>
 <td>406</td>
@@ -469,7 +1439,7 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 <tr>
 <td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>Gone -- The record requested has been removed from our servers.</td>
 </tr>
 <tr>
 <td>418</td>
@@ -477,7 +1447,7 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Too Many Requests -- You&#39;re requesting too many records! Slow down!</td>
 </tr>
 <tr>
 <td>500</td>
@@ -493,7 +1463,7 @@ Remember — a happy kitten is an authenticated kitten!
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
+                <a href="#" data-language-name="php">php</a>
                 <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
           </div>
