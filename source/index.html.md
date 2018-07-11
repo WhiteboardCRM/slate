@@ -1036,7 +1036,7 @@ Code | Meaning
 200 | OK
 404 | Not Found 
 
-## Get a Specific Relationship
+## Get a Specific Task
 
 ```php?start_inline=1
 require 'wbcrm';
@@ -1087,7 +1087,7 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the task to retrieve
 
-## Update a Specific Relationship
+## Update a Specific Task
 
 ```php?start_inline=1
 require 'wbcrm';
@@ -1131,7 +1131,7 @@ Code | Meaning
 
 
 
-## Delete a Specific Relationship
+## Delete a Specific Task
 
 ```php?start_inline=1
 require 'wbcrm';
