@@ -67,7 +67,7 @@ You must replace <code>myAuthToken</code> with your personal Auth Token.
 ## Get All Contacts
 
 ```php?start_inline=1
-// set headers
+use 'wbcrm';
 
 $api = WbCRM::APIClient->authorize!('myAuthToken');
 $api->contacts->get();
