@@ -1,3 +1,12 @@
+---
+# Slate is used to create the documentation site for `api.whiteboardcrm.com`
+---
+
+### You will need to find out how to manipulate and create the document and images.
+
+---
+---
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/lord/img/master/logo-slate.png" alt="Slate: API Documentation Generator" width="226">
   <br>
